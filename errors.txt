@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/story/hidden.rpy", line 102: expected statement.
+    for i in range(3):
+          ^
+
+Ren'Py Version: Ren'Py 8.3.4.24120703
+Sun Jun  8 18:36:16 2025

@@ -1,0 +1,9 @@
+Fonts used in this design:
+
+Font: Cinzel
+Author: Natanael Gama
+Url: http://www.fontsquirrel.com/fonts/cinzel
+
+Font: Kaushan Script
+Author: Impallari Type
+Url: http://www.fontsquirrel.com/fonts/kaushan-script

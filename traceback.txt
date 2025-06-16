@@ -1,0 +1,22 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 260, in script
+    jump c
+ScriptError: could not find label 'c'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 260, in script
+    jump c
+  File "C:\Users\pc\Desktop\규비니\renpy-8.3.4-sdk\renpy\ast.py", line 1705, in execute
+    rv = renpy.game.script.lookup(target)
+  File "C:\Users\pc\Desktop\규비니\renpy-8.3.4-sdk\renpy\script.py", line 1103, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'c'.
+
+Windows-10-10.0.22631 AMD64
+Ren'Py 8.3.4.24120703
+인도 
+Sun May 11 16:28:35 2025
