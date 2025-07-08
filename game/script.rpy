@@ -241,9 +241,23 @@ screen speech:
 
 # 틴과 대화
 screen tinBtn2:
+    # imagebutton:
+    #     auto "images/characters/room/tin2_room_%s.png"
+    #     action [SetVariable("randtext", renpy.random.randint(0, len(dialogue_list) - 1)), SetVariable("dialogue", dialogue_list[randtext]), Show("speech", transition=dissolve)]
+    #     focus_mask True
+    #     xpos 400
+    #     # ypos 0
+    #     yanchor 0.015
+    #     at transform:
+    #         zoom 0.49
     imagebutton:
         auto "images/characters/room/tin2_room_%s.png"
-        action [SetVariable("randtext", renpy.random.randint(0, len(dialogue_list) - 1)), SetVariable("dialogue", dialogue_list[randtext]), Show("speech", transition=dissolve)]
+        action [
+            Hide("speech"),  # 먼저 숨기고
+            SetVariable("randtext", renpy.random.randint(0, len(dialogue_list) - 1)), 
+            SetVariable("dialogue", dialogue_list[randtext]), 
+            Show("speech", transition=dissolve)  # 새로 띄우기
+        ]
         focus_mask True
         xpos 400
         # ypos 0
