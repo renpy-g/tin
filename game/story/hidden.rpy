@@ -95,34 +95,6 @@ label hidden_event:
 
     # 스토리 카운터 초기화
     $ story_count = 0
-    $ stories_per_group = 3
-
-    # 스토리 리스트를 3등분
-    $ story_groups = []
-    $ group_size = len(loop_list) // 3
-    $ remainder = len(loop_list) % 3
-    
-    $ start_idx = 0
-    $ end_idx = 0
-    
-    # 첫 번째 그룹
-    $ end_idx = start_idx + group_size + (1 if remainder > 0 else 0)
-    $ story_groups.append(loop_list[start_idx:end_idx])
-    $ start_idx = end_idx
-    $ remainder -= 1
-    
-    # 두 번째 그룹
-    $ end_idx = start_idx + group_size + (1 if remainder > 0 else 0)
-    $ story_groups.append(loop_list[start_idx:end_idx])
-    $ start_idx = end_idx
-    $ remainder -= 1
-    
-    # 세 번째 그룹
-    $ end_idx = start_idx + group_size + (1 if remainder > 0 else 0)
-    $ story_groups.append(loop_list[start_idx:end_idx])
-
-    $ current_group = 0
-    $ current_story_in_group = 0
 
     T "... 아, 안녕."
     T "미안, 오, 오늘은, 안 될 것, 같... 아."
@@ -227,11 +199,7 @@ label hidden_story_1:
     T "... 진리가, 중요할까."
     T "결국 내가 아직도, 두려움에서 벗어, 나지 못하는 게... 나한텐 더 주, 중요해."
 
-    # 3개 스토리마다 룸으로 돌아가기
-    if story_count % stories_per_group == 0:
-        jump loop_room
-    else:
-        jump loop_click
+    jump loop_room
 
 label hidden_story_2:
     scene black
@@ -288,11 +256,7 @@ label hidden_story_2:
     $ change_image('mu_9')
     T "... 나 무서워 [you]... ..."
 
-    # 3개 스토리마다 룸으로 돌아가기
-    if story_count % stories_per_group == 0:
-        jump loop_room
-    else:
-        jump loop_click
+    jump loop_room
 
 label hidden_story_3:
     scene black
@@ -340,11 +304,7 @@ label hidden_story_3:
         $ change_image('smail_1')
         T "답은 드, 들려주지 않아도, 돼. 고마워."
 
-        # 3개 스토리마다 룸으로 돌아가기
-    if story_count % stories_per_group == 0:
         jump loop_room
-    else:
-        jump loop_click
 
 label hidden_story_4:
     scene black
@@ -372,11 +332,7 @@ label hidden_story_4:
     $ change_image('smail_1')
     T "... 그러면 정말, 행복하겠다."
 
-        # 3개 스토리마다 룸으로 돌아가기
-    if story_count % stories_per_group == 0:
-        jump loop_room
-    else:
-        jump loop_click
+    jump loop_room
 
 
 label hidden_story_5:
@@ -421,11 +377,7 @@ label hidden_story_5:
 
     T "앞으로는 빗질, 이라도 제대로... 하려고 노력, 노력할게..."
 
-    # 3개 스토리마다 룸으로 돌아가기
-    if story_count % stories_per_group == 0:
-        jump loop_room
-    else:
-        jump loop_click
+    jump loop_room
 
 
 label hidden_story_6:
@@ -507,11 +459,7 @@ label hidden_story_6:
     # 뭔가 더 써야할듯
 
 
-    # 3개 스토리마다 룸으로 돌아가기
-    if story_count % stories_per_group == 0:
-        jump loop_room
-    else:
-        jump loop_click
+    jump loop_room
 
 label hidden_story_7:
     scene black
@@ -630,11 +578,7 @@ label hidden_story_7:
     T "... 언제쯤 모, 모든 일이 끝날까?"
     T "이대로 영원히 기적이, 오지 않으면. 죽어서야, 끝나는 걸까?"
 
-    # 3개 스토리마다 룸으로 돌아가기
-    if story_count % stories_per_group == 0:
-        jump loop_room
-    else:
-        jump loop_click
+    jump loop_room
 
 label hidden_story_8:
     scene black
@@ -764,11 +708,7 @@ label hidden_story_8:
 
     T "열심히, 할 테니까..."
 
-    # 3개 스토리마다 룸으로 돌아가기
-    if story_count % stories_per_group == 0:
-        jump loop_room
-    else:
-        jump loop_click
+    jump loop_room
 
 # 더는 루프를 돌지 않으면
 label loop_close:

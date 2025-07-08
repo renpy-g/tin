@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/story/hidden.rpy", line 102: expected statement.
-    for i in range(3):
-          ^
+File "game/story/hidden.rpy", line 335: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    jump loop_room
+    ^
 
-Ren'Py Version: Ren'Py 8.3.4.24120703
-Sun Jun  8 18:36:16 2025
+Ren'Py Version: Ren'Py 8.3.7.25031702
+Tue Jul  8 16:41:25 2025

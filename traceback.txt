@@ -1,22 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 260, in script
-    jump c
-ScriptError: could not find label 'c'.
+  File "game/story/hidden.rpy", line 264, in script
+    if story_count % stories_per_group == 0:
+  File "game/story/hidden.rpy", line 264, in <module>
+    if story_count % stories_per_group == 0:
+NameError: name 'stories_per_group' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 260, in script
-    jump c
-  File "C:\Users\pc\Desktop\규비니\renpy-8.3.4-sdk\renpy\ast.py", line 1705, in execute
-    rv = renpy.game.script.lookup(target)
-  File "C:\Users\pc\Desktop\규비니\renpy-8.3.4-sdk\renpy\script.py", line 1103, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'c'.
+  File "game/story/hidden.rpy", line 264, in script
+    if story_count % stories_per_group == 0:
+  File "C:\Users\sjrnf\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 1856, in execute
+    if renpy.python.py_eval(condition):
+  File "C:\Users\sjrnf\Downloads\renpy-8.3.7-sdk\renpy\python.py", line 1218, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\sjrnf\Downloads\renpy-8.3.7-sdk\renpy\python.py", line 1211, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/story/hidden.rpy", line 264, in <module>
+    if story_count % stories_per_group == 0:
+NameError: name 'stories_per_group' is not defined
 
-Windows-10-10.0.22631 AMD64
-Ren'Py 8.3.4.24120703
+Windows-10-10.0.26100 AMD64
+Ren'Py 8.3.7.25031702
 인도 
-Sun May 11 16:28:35 2025
+Tue Jul  8 16:39:19 2025

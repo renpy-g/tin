@@ -1,13 +1,13 @@
-renpy.geometry renpy.mask
-renpy.alpha renpy.texture
-renpy.geometry renpy.texture
-renpy.geometry renpy.imagedissolve
 renpy.dissolve renpy.dissolve
+renpy.geometry renpy.texture
 renpy.texture
-renpy.alpha renpy.geometry renpy.texture
-renpy.mask renpy.mask
 renpy.imagedissolve renpy.imagedissolve
+renpy.mask renpy.mask
 renpy.geometry renpy.solid
 renpy.solid
 renpy.dissolve renpy.geometry
+renpy.geometry renpy.imagedissolve
+renpy.alpha renpy.geometry renpy.texture
+renpy.geometry renpy.mask
 renpy.ftl
+renpy.alpha renpy.texture
